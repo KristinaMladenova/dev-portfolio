@@ -2,14 +2,124 @@ $white: #FFFFFF;
 $off-white: #EBF2FE;
 $primary: #0554F2;
 $secondary: #4B86FB;
-$transparent: #0554F2, 0.5;
+$transparent: rgba(5, 84, 242, 0.5);
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,900;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap');
+
+.body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $off-white;
+  background-image: url('./assets/grid.svg');
+  background-size: 30vh;
+  color: $primary !important;
+  ;
+}
+
+.header {
+  height: 50px;
+  width: 100%;
+}
+
+.card {
+  color: $primary !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background-color: $white !important;
+  border: 1px solid $primary;
+  box-shadow: 2px 2px 0px $transparent !important;
+}
+
+.main {
+  position: relative;
+  margin: auto;
+  width: 60vh;
+  height: 100vh;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagecontent {
+  width: 105%;
+  height: 90%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  overflow-y: scroll;
+  margin: auto;
+  padding: 0.5em;
+  background-color: pink;
+
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+
+.title {
+  margin: auto;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $off-white;
+  border-bottom: 1px solid $primary;
+}
+
+.container {
+  justify-content: space-between;
+}
+
+.element {
+  display: inline-block;
+  max-width: 100%;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 5px;
+  position: fixed;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: $transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary;
+
+}
+
+h1,
+h2,
+h3 {
+  display: inline-block !important;
+}
 
 
 .h1 {
   font-family: 'Nunito', sans-serif;
   font-weight: 900;
+  font-size: 20px;
   color: $primary;
 }
 
@@ -19,88 +129,69 @@ $transparent: #0554F2, 0.5;
   color: $secondary;
 }
 
-.help{
-  padding:10px;
+.help {
+  padding: 5px;
   color: $secondary;
   font-family: 'Nunito', sans-serif;
-  font-weight: 600;
+  font-weight: 900;
   text-shadow:
-  -1px -1px 0 $white,
-   0   -1px 0 $white,
-   1px -1px 0 $white,
-   1px  0   0 $white,
-   1px  1px 0 $white,
-   0    1px 0 $white,
-  -1px  1px 0 $white,
-  -1px  0   0 $white;}
+    -1px -1px 0 $white,
+    0 -1px 0 $white,
+    1px -1px 0 $white,
+    1px 0 0 $white,
+    1px 1px 0 $white,
+    0 1px 0 $white,
+    -1px 1px 0 $white,
+    -1px 0 0 $white;
+}
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.outlined-title {
+  color: $white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  text-shadow:
+    -1.5px -1.5px 0 $primary,
+    0 -1.5px 0 $primary,
+    1.5px -1.5px 0 $primary,
+    1.5px 0 0 $primary,
+    1.5px 1.5px 0 $primary,
+    0 1.5px 0 $primary,
+    -1.5px 1.5px 0 $primary,
+    -1.5px 0 0 $primary;
+}
+
+.socials {
+  margin-left: 10px;
+  padding-top: 4px;
+  min-width: 20px;
+  min-height: 20px;
+  background-color: $primary;
+  border: 1px solid $white;
+  border-radius: 50px;
+  box-shadow: 2px 2px 0px $transparent;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 8px;
+  color: $white;
   text-align: center;
+  vertical-align: middle;
 }
 
-.header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 50px;
-  width: 100%;
-  padding: 1em;
-  background-color: $off-white;
-}
-
-.title {
-  margin: auto;
-  width: 60%;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.container {
-  padding: 1em;
-  display: flex;
-  flex: 1;
-  background-color: $white;
-  border: 1px solid $primary;
-  filter: drop-shadow(10px 10px 4px $transparent);
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+p {
+  display: inline-block !important;
+  font-size: 13px !important;
+  font-family: 'Nunito', 'sans-serif';
+  font-weight: 500;
+  line-height: 13px !important;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .card {
   padding: 2em;
+  display: inline-block !important;
 }
 
 .read-the-docs {
