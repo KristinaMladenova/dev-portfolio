@@ -1,10 +1,10 @@
-$white: #FFFFFF;
-$off-white: #EBF2FE;
-$primary: #0554F2;
-$secondary: #4B86FB;
+$white: #ffffff;
+$off-white: #ebf2fe;
+$primary: #0554f2;
+$secondary: #4b86fb;
 $transparent: rgba(5, 84, 242, 0.5);
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap");
 
 .body {
   position: fixed;
@@ -16,10 +16,9 @@ $transparent: rgba(5, 84, 242, 0.5);
   width: 100%;
   height: 100%;
   background-color: $off-white;
-  background-image: url('./assets/grid.svg');
+  background-image: url("./assets/grid.svg");
   background-size: 30vh;
   color: $primary !important;
-  ;
 }
 
 .header {
@@ -28,12 +27,21 @@ $transparent: rgba(5, 84, 242, 0.5);
 }
 
 .card {
+  height: 100%;
+  overflow: hidden;
   color: $primary !important;
-  padding: 0 !important;
   border-radius: 0 !important;
   background-color: $white !important;
   border: 1px solid $primary;
   box-shadow: 2px 2px 0px $transparent !important;
+  display: inline-block !important;
+}
+.grid,
+GridItem {
+  background-color: rgba(0, 0, 255, 0);
+}
+.cardBody {
+  max-height: 100%;
 }
 
 .main {
@@ -49,16 +57,14 @@ $transparent: rgba(5, 84, 242, 0.5);
 }
 
 .pagecontent {
-  width: 105%;
+  width: 62.5vh;
   height: 90%;
   text-align: left;
-  display: flex;
+  display: inline-block;
   align-items: center;
+  justify-content: space-between;
   overflow-y: scroll;
   margin: auto;
-  padding: 0.5em;
-  background-color: pink;
-
 }
 
 .footer {
@@ -106,7 +112,6 @@ $transparent: rgba(5, 84, 242, 0.5);
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $secondary;
-
 }
 
 h1,
@@ -115,49 +120,35 @@ h3 {
   display: inline-block !important;
 }
 
-
 .h1 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 20px;
   color: $primary;
 }
 
 .h2 {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   color: $secondary;
 }
 
 .help {
-  padding: 5px;
   color: $secondary;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 900;
-  text-shadow:
-    -1px -1px 0 $white,
-    0 -1px 0 $white,
-    1px -1px 0 $white,
-    1px 0 0 $white,
-    1px 1px 0 $white,
-    0 1px 0 $white,
-    -1px 1px 0 $white,
+  text-shadow: -1px -1px 0 $white, 0 -1px 0 $white, 1px -1px 0 $white,
+    1px 0 0 $white, 1px 1px 0 $white, 0 1px 0 $white, -1px 1px 0 $white,
     -1px 0 0 $white;
 }
 
 .outlined-title {
   color: $white;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 900;
-  text-shadow:
-    -1.5px -1.5px 0 $primary,
-    0 -1.5px 0 $primary,
-    1.5px -1.5px 0 $primary,
-    1.5px 0 0 $primary,
-    1.5px 1.5px 0 $primary,
-    0 1.5px 0 $primary,
-    -1.5px 1.5px 0 $primary,
-    -1.5px 0 0 $primary;
+  text-shadow: -1.5px -1.5px 0 $primary, 0 -1.5px 0 $primary,
+    1.5px -1.5px 0 $primary, 1.5px 0 0 $primary, 1.5px 1.5px 0 $primary,
+    0 1.5px 0 $primary, -1.5px 1.5px 0 $primary, -1.5px 0 0 $primary;
 }
 
 .socials {
@@ -169,7 +160,7 @@ h3 {
   border: 1px solid $white;
   border-radius: 50px;
   box-shadow: 2px 2px 0px $transparent;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 600;
   font-size: 8px;
   color: $white;
@@ -180,18 +171,13 @@ h3 {
 p {
   display: inline-block !important;
   font-size: 13px !important;
-  font-family: 'Nunito', 'sans-serif';
+  font-family: "Nunito", "sans-serif";
   font-weight: 500;
   line-height: 13px !important;
   text-align: justify;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-}
-
-.card {
-  padding: 2em;
-  display: inline-block !important;
 }
 
 .read-the-docs {

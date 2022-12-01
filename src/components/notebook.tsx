@@ -1,31 +1,35 @@
 import { Box, Text } from "@chakra-ui/react";
 import React from "react";
+import AboutMe from "./about-me";
+import Navbar from "./shared/navbar";
+import Project from "./shared/project";
 import ProfileCard from "./profile-card";
+import { Grid, GridItem } from "@chakra-ui/react";
 
 const Notebook = () => {
-    
-    return (<Box className='pagecontent'>
-    <ProfileCard />
-
-    <Box className='element' style={{ width: "68%", height: "250px", float: "right" }}
-      borderBottom="1px solid blue">
-      <h1 className='h1'>Kristina Mladenova</h1>
-
-      <Box className='element' style={{ float: "right"}}>
-        <h3 className='socials'>i</h3>
-        <h3 className='socials'>f</h3>
-        <h3 className='socials'>li</h3>
+  return (
+    <Box className="pagecontent">
+      <Box className="element" width="100%" paddingRight="20px">
+        <Grid
+          templateRows="repeat(1, 1fr)"
+          templateColumns="repeat(3, 1fr)"
+          gap={4}
+          width="100%"
+          top="0px;"
+        >
+          <GridItem rowSpan={1} colSpan={1}>
+            <ProfileCard />
+          </GridItem>
+          <GridItem rowSpan={1} colSpan={2}>
+            <AboutMe />
+          </GridItem>
+        </Grid>
       </Box>
 
-      <Text style={{paddingRight:"10px", height:"150px",}} overflowY="auto">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </Text>
-      
-      <Text style={{ textIndent: "10px", paddingTop:"10px" }}><span className='outlined-title'>#</span> .
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      </Text>
+      <Navbar />
+      <Project />
     </Box>
-</Box>);
-}
+  );
+};
 
 export default Notebook;

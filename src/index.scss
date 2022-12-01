@@ -1,11 +1,11 @@
-$white:#FFFFFF;
-$off-white:#EBF2FE;
-$primary:#0554F2;
-$secondary:#4B86FB;
-$transparent:#0554F2, 0.5;
+$white: #ffffff;
+$off-white: #ebf2fe;
+$primary: #0554f2;
+$secondary: #4b86fb;
+$transparent: #0554f2, 0.5;
 
 :root {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   line-height: 24px;
   font-weight: 400;
 
@@ -34,7 +34,6 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
 
 button {
   border-radius: 8px;

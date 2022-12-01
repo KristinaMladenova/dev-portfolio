@@ -1,35 +1,26 @@
-import './App.scss';
-import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
-import { Box } from '@chakra-ui/react';
-import Notebook from './components/notebook';
+import "./App.scss";
+import * as React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
+import Notebook from "./components/notebook";
+import Header from "./components/shared/header";
+import Footer from "./components/shared/footer";
+import HelpOverlay from "./components/shared/help-overlay";
 
 function App() {
-
   return (
     <ChakraProvider>
-      <Box className='body'>
-        <Box className='main'>
-          <Box className='header'>
-            <Box className='title'>
-              <h2 className='h2'>→  welcome to lina.dev</h2>
-              <h2 className='help'>?</h2>
-            </Box>
-          </Box>
+      <Box className="body">
+        <Box className="main">
+          <Header />
 
           <Notebook />
 
-          <Box className='footer'>
-            <Box className='title'>
-              <h2 className='h2'>made with love&coffee</h2>
-              <h2 className='h2'>'22</h2>
-            </Box>
-          </Box>
+          <Footer />
         </Box>
-      </Box >
-
-    </ChakraProvider >
-  )
+      </Box>
+    </ChakraProvider>
+  );
 }
 
-export default App
+export default App;
