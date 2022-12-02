@@ -8,6 +8,7 @@ const Footer = () => {
         <h2 className="h2">made with love&coffee</h2>
         <h2 className="h2">'22</h2>
       </Box>
+      <h2 className="totop">⤒</h2>
     </Box>
   );
 };

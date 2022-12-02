@@ -1,5 +1,5 @@
 $white: #ffffff;
-$off-white: #ebf2fe;
+$off-white: #4b86fb;
 $primary: #0554f2;
 $secondary: #4b86fb;
 $transparent: #0554f2, 0.5;
@@ -33,6 +33,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 button {
@@ -54,10 +55,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: $off-white;
+    background-color: $primary;
   }
   a:hover {
     color: #747bff;

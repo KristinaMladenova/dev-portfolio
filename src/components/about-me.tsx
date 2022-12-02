@@ -1,5 +1,6 @@
-import { Box, Text, Grid, GridItem } from "@chakra-ui/react";
+import { Icon, Box, Text, Grid, GridItem, HStack, Tag } from "@chakra-ui/react";
 import React from "react";
+import Typewriter from "typewriter-effect";
 
 const AboutMe = () => {
   return (
@@ -21,12 +22,28 @@ const AboutMe = () => {
         top="0px;"
         height="300px"
       >
-        <GridItem rowSpan={1} colSpan={2} />
-        <GridItem rowSpan={1} colSpan={1}>
-          <h1 className="h1">Kristina Mladenova</h1>
+        <GridItem rowSpan={2} colSpan={1}>
+          <h1 className="h1" style={{ color: "#0554f2" }}>
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("Kristina<br>Mladenova")
+                  .callFunction(() => {
+                    console.log("String typed out!");
+                  })
+                  .pauseFor(30)
+                  .deleteAll()
+                  .callFunction(() => {
+                    console.log("All strings were deleted");
+                  })
+                  .start();
+              }}
+            />
+          </h1>
         </GridItem>
+        <GridItem rowSpan={1} colSpan={1} colStart={2} />
         <GridItem rowSpan={1} colSpan={1} textAlign="right">
-          <h3 className="socials">i</h3>
+          <h3 className="socials">ig</h3>
           <h3 className="socials">f</h3>
           <h3 className="socials">li</h3> .
         </GridItem>
@@ -60,10 +77,13 @@ const AboutMe = () => {
           </Text>
         </GridItem>
         <GridItem rowSpan={1} colSpan={2}>
-          <Text>
-            <span className="outlined-title">#</span> . Lorem ipsum dolor sit
-            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          </Text>
+          <HStack>
+            <span className="h2">i value #</span>
+            <Tag className="tag">graphic design</Tag>
+            <Tag className="tag">dev</Tag>
+            <Tag className="tag">uiux</Tag>
+            <Tag className="tag">open source</Tag>
+          </HStack>
         </GridItem>
       </Grid>
     </Box>

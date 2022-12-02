@@ -12,9 +12,9 @@ function App() {
     <ChakraProvider>
       <Box className="body">
         <Box className="main">
-          <Header />
+          <Header zIndex="2" />
 
-          <Notebook />
+          <Notebook zIndex="0" />
 
           <Footer />
         </Box>

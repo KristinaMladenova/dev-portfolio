@@ -36,6 +36,18 @@ $transparent: rgba(5, 84, 242, 0.5);
   box-shadow: 2px 2px 0px $transparent !important;
   display: inline-block !important;
 }
+.css-a5mhaz {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.tag {
+  background-color: $secondary !important;
+  color: $white !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600 !important;
+  font-size: 11px !important;
+  min-height: 0 !important;
+}
 .grid,
 GridItem {
   background-color: rgba(0, 0, 255, 0);
@@ -43,7 +55,6 @@ GridItem {
 .cardBody {
   max-height: 100%;
 }
-
 .main {
   position: relative;
   margin: auto;
@@ -65,20 +76,22 @@ GridItem {
   justify-content: space-between;
   overflow-y: scroll;
   margin: auto;
+  padding-right: 20px;
 }
 
 .footer {
   height: 50px;
-  width: 100%;
+  width: 64.5vh;
   display: flex;
+  margin-left: 0.5vh;
+  align-items: center;
 }
 
 .title {
+  font-family: "Nunito";
   margin: auto;
-  width: 100%;
-  text-align: left;
+  width: 60vh;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   background-color: $off-white;
   border-bottom: 1px solid $primary;
@@ -91,27 +104,6 @@ GridItem {
 .element {
   display: inline-block;
   max-width: 100%;
-}
-
-/* Designing for scroll-bar */
-::-webkit-scrollbar {
-  width: 5px;
-  position: fixed;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background-color: $transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: $transparent;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $secondary;
 }
 
 h1,
@@ -127,7 +119,8 @@ h3 {
   color: $primary;
 }
 
-.h2 {
+.h2,
+.totop {
   font-family: "Nunito", sans-serif;
   font-weight: 600;
   color: $secondary;
@@ -142,7 +135,28 @@ h3 {
     -1px 0 0 $white;
 }
 
+.chatbox {
+  display: display;
+}
+
+@media (max-width: 1100px) {
+  .chatbox {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .main,
+  .title {
+    width: 100%;
+  }
+  .totop {
+    display: none;
+  }
+}
+
 .outlined-title {
+  padding-left: 2px;
+  padding-right: 10px;
   color: $white;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
@@ -182,4 +196,25 @@ p {
 
 .read-the-docs {
   color: #888;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar {
+  width: 5px;
+  position: fixed;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: $transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: $transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $secondary;
 }

@@ -20,7 +20,6 @@ const Header = () => {
           }}
           onMouseEnter={() => setIsShown(true)}
           onMouseLeave={() => setIsShown(false)}
-          transition="0.8s linear"
         >
           <h2 className="help">?</h2>
         </Box>

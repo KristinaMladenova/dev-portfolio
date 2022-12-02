@@ -1,5 +1,17 @@
-import { Box } from "@chakra-ui/react";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Button,
+} from "@chakra-ui/react";
 import React from "react";
+
+import { Box, Divider, Link, Text } from "@chakra-ui/react";
 
 const HelpOverlay = () => {
   return (
@@ -9,13 +21,31 @@ const HelpOverlay = () => {
         style={{
           height: "auto",
           margin: "auto",
-          padding: "10px",
-          width: "30%",
+          padding: "30px",
+          width: "70vh",
         }}
       >
-        tincidunt ornare massa eget egestas purus viverra. Massa ultricies mi
-        quis hendrerit dolor magna eget est.Massa ultricies mi quis hendrerit
-        dolor magna eget est.Massa ultricies mi quis hendrer
+        <h1 className="h1">Hi 👋</h1>
+        <Text fontWeight="600" marginTop="1em">
+          I learned HTML&CSS in the 6th grade because of a little chatroom
+          builder website called{" "}
+          <u>
+            <b>Chatango</b>
+          </u>
+          , which is now more or less deprecated but that's how my love for
+          webdev and uiux started.
+        </Text>
+        <Text fontWeight="600" marginTop="1em">
+          When designing this portfolio website I wanted to capture the magic
+          and whimsy I felt during that period by emulating the design trends in
+          the early 2010's. (Yes, This most definitely includes the bubble
+          cursor.) Feel free to look around, and don't be a stranger! Leave a
+          message in the sidebar →
+        </Text>
+        <Text fontWeight="600" marginTop="1em">
+          ☕️❤️️ Sent with love&coffee,<br></br>
+          Linv
+        </Text>
       </Box>
     </Box>
   );
