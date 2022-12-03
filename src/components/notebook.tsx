@@ -1,8 +1,7 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React from "react";
 import AboutMe from "./about-me";
-import Navbar from "./navbar";
-import Project from "./shared/project";
+import Navbar from "./tab-panels";
 import ProfileCard from "./profile-card";
 import { Grid, GridItem } from "@chakra-ui/react";
 

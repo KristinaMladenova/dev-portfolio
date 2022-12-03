@@ -1,18 +1,8 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Link,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-} from "@chakra-ui/react";
-import Uiux from "./projects/uiux-projects";
-import AllProjects from "./projects/all-projects";
-import DesignProjects from "./projects/design-projects";
-import DevProjects from "./projects/dev-projects";
-import Blog from "./projects/blog";
+import React from "react";
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from "@chakra-ui/react";
+
+import ProjectList from "./projects/project-list";
+import { ProjectsArray } from "./../projects-array";
 
 const Navbar = () => {
   return (
@@ -91,19 +81,27 @@ const Navbar = () => {
       </TabList>
       <TabPanels>
         <TabPanel>
-          <AllProjects />
+          <ProjectList projects={ProjectsArray} />
         </TabPanel>
         <TabPanel>
-          <DesignProjects />
+          <ProjectList
+            projects={ProjectsArray.filter((p) => p.type === "design")}
+          />
         </TabPanel>
         <TabPanel>
-          <DevProjects />
+          <ProjectList
+            projects={ProjectsArray.filter((p) => p.type === "dev")}
+          />
         </TabPanel>
         <TabPanel>
-          <Uiux />
+          <ProjectList
+            projects={ProjectsArray.filter((p) => p.type === "uiux")}
+          />
         </TabPanel>
         <TabPanel>
-          <Blog />
+          <ProjectList
+            projects={ProjectsArray.filter((p) => p.type === "blog")}
+          />
         </TabPanel>
       </TabPanels>
     </Tabs>
