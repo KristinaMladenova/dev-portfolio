@@ -1,14 +1,30 @@
-import { Icon, Box, Text, Grid, GridItem, HStack, Tag } from "@chakra-ui/react";
+import {
+  Icon,
+  Box,
+  Text,
+  Grid,
+  GridItem,
+  HStack,
+  Tag,
+  Link,
+  IconButton,
+  SimpleGrid,
+  AbsoluteCenter,
+} from "@chakra-ui/react";
 import React from "react";
-import Typewriter from "typewriter-effect";
 
+import {
+  TiSocialLinkedin,
+  TiSocialInstagramCircular,
+  TiSocialGithub,
+} from "react-icons/ti";
+import { SiBehance } from "react-icons/si";
 const AboutMe = () => {
   return (
     <Box
       className="element"
       style={{
-        width: "100%",
-        height: "100%",
+        height: "95%",
         overflow: "hidden",
         justifyContent: "space-between",
       }}
@@ -16,46 +32,37 @@ const AboutMe = () => {
     >
       <Grid
         className="grid"
-        templateRows="repeat(8, 1fr)"
-        templateColumns="repeat(2, 1fr)"
-        gap={3}
-        top="0px;"
-        height="300px"
+        templateRows="repeat(5, 1fr)"
+        templateColumns="repeat(3, 1fr)"
+        gap={0}
+        height="200px"
+        margin="auto"
       >
-        <GridItem rowSpan={2} colSpan={1}>
-          <h1 className="h1" style={{ color: "#0554f2" }}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter
-                  .typeString("Kristina<br>Mladenova")
-                  .callFunction(() => {
-                    console.log("String typed out!");
-                  })
-                  .pauseFor(30)
-                  .deleteAll()
-                  .callFunction(() => {
-                    console.log("All strings were deleted");
-                  })
-                  .start();
-              }}
-            />
+        <GridItem rowSpan={1} h="20px" colSpan={2}>
+          <h1 className="h1" style={{ fontSize: "20px", color: "#0554f2" }}>
+            Kristina Mladenova
           </h1>
         </GridItem>
-        <GridItem rowSpan={1} colSpan={1} colStart={2} />
-        <GridItem rowSpan={1} colSpan={1} textAlign="right">
-          <h3 className="socials">ig</h3>
-          <h3 className="socials">f</h3>
-          <h3 className="socials">li</h3> .
+        <GridItem h="20px" rowSpan={1} colSpan={1} textAlign="right">
+          <Link href="https://github.com/KristinaMladenova" isExternal>
+            <TiSocialGithub className="socials" />
+          </Link>
+          <Link href="https://www.linkedin.com/in/kmladenova/" isExternal>
+            <TiSocialLinkedin className="socials" />
+          </Link>
+          <Link
+            display="none"
+            href="https://www.linkedin.com/in/kmladenova/"
+            isExternal
+          >
+            <SiBehance className="socials" />
+          </Link>
+          <Link href="https://www.instagram.com/gg.linv/" isExternal>
+            <TiSocialInstagramCircular className="socials" />
+          </Link>{" "}
         </GridItem>
-        <GridItem
-          rowSpan={5}
-          colSpan={2}
-          w="100%"
-          height="100%"
-          overflowY="auto"
-          paddingRight="10px"
-        >
-          <Text>
+        <GridItem rowSpan={3} colSpan={3} w="100%" overflowY="hidden">
+          <Text overflowY="scroll" h="100%" paddingRight="10px">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eni
             sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
@@ -76,14 +83,41 @@ const AboutMe = () => {
             qui officia deserunt mollit anim id est laborum.
           </Text>
         </GridItem>
-        <GridItem rowSpan={1} colSpan={2}>
-          <HStack>
-            <span className="h2">i value #</span>
-            <Tag className="tag">graphic design</Tag>
-            <Tag className="tag">dev</Tag>
-            <Tag className="tag">uiux</Tag>
-            <Tag className="tag">open source</Tag>
+        <GridItem
+          rowSpan={1}
+          colSpan={3}
+          textAlign="justify"
+          verticalAlign="middle"
+          margin="auto"
+          h="20px"
+          w="100%"
+          padding="p"
+          lineHeight="12px"
+        >
+          <HStack h="100$" w="100%">
+            <Box
+              as="span"
+              className="outlined-title"
+              w="auto"
+              style={{
+                fontSize: "20px",
+                verticalAlign: "middle",
+                textAlign: "left",
+              }}
+            >
+              #
+            </Box>
+            <Box as="span" w="100%" className="tag">
+              minimalism, accesibilty, clean code, usablility, open source, good
+              design principles
+            </Box>
           </HStack>
+
+          {/* <Tag className="tag">minimalism</Tag>
+          <Tag className="tag">accesibilty</Tag>
+          <Tag className="tag">clean code</Tag>
+          <Tag className="tag">usablility</Tag>
+          <Tag className="tag">open source</Tag> */}
         </GridItem>
       </Grid>
     </Box>

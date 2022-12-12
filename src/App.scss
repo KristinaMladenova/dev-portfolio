@@ -2,11 +2,14 @@ $white: #ffffff;
 $off-white: #ebf2fe;
 $primary: #0554f2;
 $secondary: #4b86fb;
-$transparent: rgba(5, 84, 242, 0.5);
+$transparent: rgba(5, 84, 242, 0.4);
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap");
 
 .body {
+  font-size: 13px;
+  font-family: "Nunito";
+  font-weight: 500;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +20,7 @@ $transparent: rgba(5, 84, 242, 0.5);
   height: 100%;
   background-color: $off-white;
   background-image: url("./assets/grid.svg");
-  background-size: 30vh;
+  background-size: 70vh;
   color: $primary !important;
 }
 
@@ -28,38 +31,61 @@ $transparent: rgba(5, 84, 242, 0.5);
 
 .card {
   height: 100%;
-  overflow: hidden;
-  color: $primary !important;
+  overflow: none;
   border-radius: 0 !important;
   background-color: $white !important;
   border: 1px solid $primary;
   box-shadow: 2px 2px 0px $transparent !important;
   display: inline-block !important;
 }
+
+.css-10kxouo {
+  padding: 0 !important;
+}
 .css-a5mhaz {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 .tag {
-  background-color: $secondary !important;
+  margin-top: 8px;
+  text-transform: none !important;
+  background-color: transparent !important;
+  color: $secondary !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  line-height: 12px;
+  min-height: 0 !important;
+  margin-right: 10px;
+}
+
+.badge {
+  background-color: white !important;
+  background-image: url("./assets/arrow.svg") !important;
+  background-position: right !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  text-transform: none !important;
+  padding-right: 10px !important;
+  border-radius: 0px !important;
   color: $white !important;
   font-family: "Nunito", sans-serif;
   font-weight: 600 !important;
   font-size: 11px !important;
-  min-height: 0 !important;
+}
+
+.css-1y4n9jw {
+  text-indent: 0 !important;
 }
 .grid,
 GridItem {
   background-color: rgba(0, 0, 255, 0);
 }
-.cardBody {
-  max-height: 100%;
-}
 .main {
   position: relative;
   margin: auto;
-  width: 60vh;
-  height: 100vh;
+  width: 62.7%;
+  height: 100%;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -68,7 +94,7 @@ GridItem {
 }
 
 .pagecontent {
-  width: 62.5vh;
+  width: 100%;
   height: 90%;
   text-align: left;
   display: inline-block;
@@ -81,20 +107,10 @@ GridItem {
 
 .footer {
   height: 50px;
-  width: 64.5vh;
+  width: 100%;
   display: flex;
   margin-left: 0.5vh;
   align-items: center;
-}
-
-.title {
-  font-family: "Nunito";
-  margin: auto;
-  width: 60vh;
-  display: flex;
-  justify-content: space-between;
-  background-color: $off-white;
-  border-bottom: 1px solid $primary;
 }
 
 .container {
@@ -103,20 +119,27 @@ GridItem {
 
 .element {
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
 }
 
 h1,
 h2,
 h3 {
-  display: inline-block !important;
+  display: inline !important;
+}
+
+a:hover {
+  font-weight: 600 !important;
+  color: $off-white !important;
 }
 
 .h1 {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 20px;
+  line-height: 20px;
   color: $primary;
+  vertical-align: bottom;
 }
 
 .h2,
@@ -126,13 +149,35 @@ h3 {
   color: $secondary;
 }
 
-.help {
-  color: $secondary;
+.title {
+  font-family: "Nunito";
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $off-white;
+  border-bottom: 1px solid $primary;
+}
+
+.outlined-title {
+  padding-left: 2px;
+  padding-right: 10px;
+  color: $white;
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  text-shadow: -1px -1px 0 $white, 0 -1px 0 $white, 1px -1px 0 $white,
-    1px 0 0 $white, 1px 1px 0 $white, 0 1px 0 $white, -1px 1px 0 $white,
-    -1px 0 0 $white;
+  text-shadow: -1.5px -1.5px 0 $primary, 0 -1.5px 0 $primary,
+    1.5px -1.5px 0 $primary, 1.5px 0 0 $primary, 1.5px 1.5px 0 $primary,
+    0 1.5px 0 $primary, -1.5px 1.5px 0 $primary, -1.5px 0 0 $primary;
+}
+
+p {
+  display: inline-block !important;
+  font-family: "Nunito", "sans-serif" !important;
+  font-weight: 500;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .chatbox {
@@ -154,67 +199,71 @@ h3 {
   }
 }
 
-.outlined-title {
-  padding-left: 2px;
-  padding-right: 10px;
-  color: $white;
-  font-family: "Nunito", sans-serif;
-  font-weight: 900;
-  text-shadow: -1.5px -1.5px 0 $primary, 0 -1.5px 0 $primary,
-    1.5px -1.5px 0 $primary, 1.5px 0 0 $primary, 1.5px 1.5px 0 $primary,
-    0 1.5px 0 $primary, -1.5px 1.5px 0 $primary, -1.5px 0 0 $primary;
-}
-
 .socials {
-  margin-left: 10px;
-  padding-top: 4px;
-  min-width: 20px;
-  min-height: 20px;
+  height: 20px !important;
+  width: 20px !important;
+  margin-right: 5px;
+  color: $off-white;
   background-color: $primary;
   border: 1px solid $white;
   border-radius: 50px;
   box-shadow: 2px 2px 0px $transparent;
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  font-size: 8px;
-  color: $white;
-  text-align: center;
   vertical-align: middle;
+  align-items: center;
+  display: inline;
+}
+.socials:hover,
+.socials > *:hover {
+  background-color: $secondary;
+  color: $white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
-p {
-  display: inline-block !important;
-  font-size: 13px !important;
-  font-family: "Nunito", "sans-serif";
-  font-weight: 500;
-  line-height: 13px !important;
-  text-align: justify;
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+.insetButton {
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  background: white;
+  border: 1px solid #0554f2;
+  border-radius: 0;
+  color: $secondary;
+  width: 200px;
+  box-shadow: inset -2px -2px 0px $transparent !important;
 }
-
-.read-the-docs {
-  color: #888;
+.insetButton:hover {
+  background-color: $secondary;
+  color: $off-white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 /* Designing for scroll-bar */
-::-webkit-scrollbar {
+::-webkit-scrollbar,
+-mozkit-scrollbar {
   width: 5px;
   position: fixed;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track,
+-moxkit-scrollbar-track {
   background-color: $transparent;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
-  background-color: $transparent;
+::-webkit-scrollbar-thumb,
+-mozkit-scrollbar-thumb {
+  background-color: $secondary;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: $secondary;
+::-webkit-scrollbar-thumb:hover,
+-mozkit-scrollbar-thumb:hover {
+  background: $primary;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }

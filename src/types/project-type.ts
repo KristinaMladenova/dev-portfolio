@@ -1,6 +1,7 @@
 export type ProjectType = {
-  type: string;
+  type: string[];
   title: string;
   content: string;
   imageUrl: string;
+  readMore: string;
 };

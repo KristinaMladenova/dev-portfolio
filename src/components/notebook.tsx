@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import React from "react";
 import AboutMe from "./about-me";
 import Navbar from "./tab-panels";
@@ -7,24 +7,13 @@ import { Grid, GridItem } from "@chakra-ui/react";
 
 const Notebook = () => {
   return (
-    <Box className="pagecontent">
-      <Box className="element" width="100%">
-        <Grid
-          templateRows="repeat(1, 1fr)"
-          templateColumns="repeat(3, 1fr)"
-          gap={4}
-          width="100%"
-          top="0px;"
-        >
-          <GridItem rowSpan={1} colSpan={1}>
-            <ProfileCard zIndex="2" />
-          </GridItem>
-          <GridItem rowSpan={1} colSpan={2}>
-            <AboutMe />
-          </GridItem>
-        </Grid>
+    <Box className="pagecontent" zIndex="4">
+      <Box className="element" zIndex="3">
+        <HStack spacing="15px" alignItems="end">
+          <ProfileCard zIndex="0" />
+          <AboutMe />
+        </HStack>
       </Box>
-
       <Navbar />
     </Box>
   );

@@ -18,7 +18,7 @@
         "#4b86fb"
       );
 
-      var bubbles = 100; // maximum number of bubbles on screen
+      var bubbles = 30; // maximum number of bubbles on screen
 
       var x = (ox = 400);
 
@@ -257,7 +257,13 @@
   <body class="body">
     <div id="root"></div>
     <div
-      style="position: fixed; bottom: 3vh; right: 3vh; height: auto; z-index: 1"
+      style="
+        position: fixed;
+        bottom: 15px;
+        right: 5px;
+        height: auto;
+        z-index: 0;
+      "
       class="chatbox"
     >
       <script
@@ -266,7 +272,7 @@
         async
         src="//st.chatango.com/js/gz/emb.js"
         style="
-        width: 200px; height: 300px;
+        width: 200px; height: 200px;
         font-family: 'Nunito!important;
         font-weight: 600;
         font-size: 13px;
@@ -274,7 +280,7 @@
       >
         {"handle":"blueteapots","arch":"js","styles":{"b":100,"c":"0554f2","d":"0554f2","l":"0554f2","m":"FFFFFF","p":"9.9","r":100,"q":"0554f2","allowpm":0,"fwtickm":0,"usricon":0,"sbc":"0554f2", "sba":"50"}}
       </script>
-      <script type="module" src="/src/main.tsx" style="z-index: 4"></script>
+      <script type="module" src="/src/main.tsx" style="z-index: 100"></script>
     </div>
   </body>
 </html>

@@ -19,6 +19,11 @@ const Navbar = () => {
             borderBottom: "1px solid blue",
             borderRadius: "0",
           }}
+          _active={{
+            fontWeight: "bolder",
+            border: "1px solid pink",
+            borderRadius: "0",
+          }}
         >
           all
         </Tab>
@@ -90,12 +95,16 @@ const Navbar = () => {
         </TabPanel>
         <TabPanel>
           <ProjectList
-            projects={ProjectsArray.filter((p) => p.type === "dev")}
+            projects={ProjectsArray.filter(
+              (p) => p.type === "dev" || p.type === "dev, uiux"
+            )}
           />
         </TabPanel>
         <TabPanel>
           <ProjectList
-            projects={ProjectsArray.filter((p) => p.type === "uiux")}
+            projects={ProjectsArray.filter(
+              (p) => p.type === "uiux" || p.type === "dev, uiux"
+            )}
           />
         </TabPanel>
         <TabPanel>

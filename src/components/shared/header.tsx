@@ -1,12 +1,13 @@
-import { Box } from "@chakra-ui/react";
+import { Box, IconButton } from "@chakra-ui/react";
 import React, { useState } from "react";
 import HelpOverlay from "./help-overlay";
 
+import { FaQuestion } from "react-icons/fa";
 const Header = () => {
   const [isShown, setIsShown] = useState(false);
 
   return (
-    <Box className="header">
+    <Box className="header" zIndex="100">
       <Box className="title">
         <h2 className="h2">→ welcome to lina.dev</h2>
         <Box
@@ -16,14 +17,20 @@ const Header = () => {
             width: "auto",
             padding: "0px",
             paddingLeft: "15px",
-            paddingRight: "15px",
           }}
           onMouseEnter={() => setIsShown(true)}
           onMouseLeave={() => setIsShown(false)}
         >
-          <h2 className="help">?</h2>
+          <IconButton
+            size="s"
+            color="#4b86fb"
+            padding="5px"
+            borderRadius="50%"
+            aria-label="LinkedIn"
+            icon={<FaQuestion />}
+          />
         </Box>
-        {isShown && <HelpOverlay zIndex="4"></HelpOverlay>}
+        {isShown && <HelpOverlay zIndex="100"></HelpOverlay>}
       </Box>
     </Box>
   );

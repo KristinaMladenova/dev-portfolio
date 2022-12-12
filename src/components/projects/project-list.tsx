@@ -17,6 +17,7 @@ const ProjectList = ({ projects }: AllProjectsType) => {
             title={p.title}
             content={p.content}
             imageUrl={p.imageUrl}
+            readMore={p.readMore}
           />
         );
       })}
