@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Image,
   Box,
@@ -7,9 +6,11 @@ import {
   GridItem,
   Badge,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import { ProjectType } from "../../types/project-type";
 import InsetButton from "../shared/insetButton";
+import React from "react";
 
 const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
   return (
@@ -18,8 +19,9 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
         className="card"
         lineHeight="15px"
         w="100%"
-        h="200px"
+        h="28.52%"
         padding="10px"
+        marginBottom="30px"
         overflow="hidden"
       >
         <Grid
@@ -30,21 +32,22 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
         >
           <GridItem
             rowSpan={4}
-            colSpan={3}
+            colSpan={4}
             overflow="auto"
             padding="0px"
-            textIndent="20px"
             textAlign="justify"
             paddingRight="10px"
           >
-            <Badge className="badge">{type}</Badge> {content}
+            <h1 class="h1">{title}</h1>
+            <br></br>
+            {content}
           </GridItem>
 
           <GridItem
             rowSpan={5}
-            colSpan={2}
+            colSpan={1}
             rowStart={1}
-            colStart={4}
+            colStart={5}
             bg="white"
             border="1px solid blue"
             backgroundImage={imageUrl}
@@ -62,7 +65,7 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
             rowSpan={1}
             colSpan={2}
             rowStart={5}
-            colStart={4}
+            colStart={5}
             textAlign="center"
           >
             <h1
@@ -77,9 +80,9 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
             </h1>
           </GridItem>
           <GridItem rowSpan={1} colSpan={3} rowStart={5} colStart={1}>
-            <InsetButton url={readMore} className="insetButton">
-              learn more
-            </InsetButton>
+            <a href={readMore}>
+              <InsetButton>learn more</InsetButton>
+            </a>
           </GridItem>
         </Grid>
       </Box>

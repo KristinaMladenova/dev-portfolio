@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <Box className="header" zIndex="100">
-      <Box className="title">
+      <Box className="title" paddingTop="10px">
         <h2 className="h2">→ welcome to lina.dev</h2>
         <Box
           zIndex="3"

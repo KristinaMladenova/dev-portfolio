@@ -180,25 +180,6 @@ p {
   hyphens: auto;
 }
 
-.chatbox {
-  display: display;
-}
-
-@media (max-width: 1100px) {
-  .chatbox {
-    display: none;
-  }
-}
-@media (max-width: 600px) {
-  .main,
-  .title {
-    width: 100%;
-  }
-  .totop {
-    display: none;
-  }
-}
-
 .socials {
   height: 20px !important;
   width: 20px !important;
@@ -266,4 +247,33 @@ p {
   background: $primary;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+.chatbox {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .chatbox {
+    display: display;
+  }
+}
+
+@media (max-width: 1100px) {
+  .chatbox {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .main,
+  .title {
+    width: 100%;
+  }
+
+  .css-tubnc,
+  .css-7togbo,
+  .card.css-1u9exe8 {
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
