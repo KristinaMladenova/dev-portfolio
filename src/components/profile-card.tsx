@@ -1,5 +1,15 @@
-import { Image, Text, Card, CardBody, Divider, Stack } from "@chakra-ui/react";
+import {
+  Image,
+  Text,
+  Card,
+  CardBody,
+  Divider,
+  Stack,
+  Box,
+  Button,
+} from "@chakra-ui/react";
 import React from "react";
+import InsetButton from "./shared/insetButton";
 
 const ProfileCard = () => {
   return (
@@ -17,26 +27,45 @@ const ProfileCard = () => {
           <Text display="inline" w="100%">
             <Image
               src="./src/assets/arrowstroke.svg"
+              h="15px"
               alt="arrow pointing right"
               float="left"
             />
-
-            <h1 className="outlined-title">lina</h1>
+            <h1
+              className="outlined-title"
+              style={{ fontSize: "20px", lineHeight: "20px" }}
+            >
+              lina
+            </h1>
           </Text>
-
-          <Divider alignSelf="center" />
 
           <Text
             w="100%"
             style={{
               textIndent: "0px",
-              fontSize: "10px",
-              lineHeight: "10px",
+              fontSize: "13px",
+              lineHeight: "14px",
               fontWeight: "500",
               fontStyle: "italic",
             }}
           >
             This is my nickname based on a childhood teddybear named Lino 🧸️🎈
+            <Box
+              style={{
+                marginTop: "5px",
+                background: "blue",
+                color: "white",
+                padding: "5px",
+                textAlign: "center",
+              }}
+            >
+              Download CV
+            </Box>
+            <Divider margin="5px" />
+            <Text style={{ fontSize: "10px", lineHeight: "10px" }}>
+              → ! This website is under construction, currently optimised for
+              Chrome based browsers.
+            </Text>
           </Text>
         </Stack>
       </CardBody>

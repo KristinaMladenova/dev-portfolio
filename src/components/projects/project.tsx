@@ -17,7 +17,6 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
     <>
       <Box
         className="card"
-        lineHeight="15px"
         w="100%"
         h="28.52%"
         padding="10px"
@@ -27,16 +26,17 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
         <Grid
           h="100%"
           templateRows="repeat(5, 1fr)"
-          templateColumns="repeat(5, 1fr)"
+          templateColumns="repeat(4, 1fr)"
           gap={3}
         >
           <GridItem
             rowSpan={4}
-            colSpan={4}
+            colSpan={3}
             overflow="auto"
             padding="0px"
             textAlign="justify"
             paddingRight="10px"
+            color="#4b86fb"
           >
             <h1 class="h1">{title}</h1>
             <br></br>
@@ -45,14 +45,14 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
 
           <GridItem
             rowSpan={5}
-            colSpan={1}
+            colSpan={2}
             rowStart={1}
-            colStart={5}
+            colStart={4}
             bg="white"
             border="1px solid blue"
             backgroundImage={imageUrl}
             backgroundSize="cover"
-            backgroundPosition="center center"
+            backgroundPosition="top center"
           >
             <Box
               backgroundImage="linear-gradient(transparent,transparent, blue)"
@@ -65,7 +65,7 @@ const Project = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
             rowSpan={1}
             colSpan={2}
             rowStart={5}
-            colStart={5}
+            colStart={4}
             textAlign="center"
           >
             <h1

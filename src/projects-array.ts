@@ -20,18 +20,23 @@ export const ProjectsArray: ProjectType[] = [
 
   {
     type: "uiux",
-    title: "UIUX post",
-    content: "I am uiux hi",
-    imageUrl:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.dribbble.com%2Fusers%2F4383005%2Fscreenshots%2F11142457%2Fmedia%2F0a426e21b3435b829c789a196a81ed7e.jpg&f=1&nofb=1&ipt=95f9d7fd15a0a4b6473fa5811e5f78bd8936736cdc3862db76aa0d04a7c1b8ba&ipo=images",
+    title: "Diary UI",
+    content: "",
+    imageUrl: "./src/assets/UI-portfolio/diary.svg",
     readMore: "",
   },
   {
-    type: "blog",
+    type: "uiux",
+    title: "Notebook UI",
+    content: "dgfhsdgsfdgsdf",
+    imageUrl: "./src/assets/UI-portfolio/notebook.svg",
+    readMore: "",
+  },
+  {
+    type: "uiux",
     title: "Blog",
     content: "I am blog hi",
-    imageUrl:
-      "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcharliepage.com%2Fwp-content%2Fuploads%2F2015%2F09%2Fblogstages.jpg&f=1&nofb=1&ipt=8bc3c6742a2a22942e7b705482c7aa8dd8fcc2000badb5bdb5293425adc696cc&ipo=images",
+    imageUrl: "./src/assets/UI-portfolio/playground1.png",
     readMore: "",
   },
 ];

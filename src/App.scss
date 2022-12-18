@@ -53,12 +53,32 @@ $transparent: rgba(5, 84, 242, 0.4);
   color: $secondary !important;
   font-family: "Nunito", sans-serif;
   font-weight: 800 !important;
-  font-size: 12px !important;
-  line-height: 12px;
+  font-size: 13px !important;
   min-height: 0 !important;
   margin-right: 10px;
 }
-
+.contentFilter {
+  border: 1px solid transparent !important;
+  border-radius: 0;
+  color: $secondary;
+  font-weight: 500;
+}
+.contentFilter:active,
+.contentFilter:hover,
+.contentFilter:target,
+.contentFilter:focus {
+  // background-image: url(./src/assets/straight-arrow.svg);
+  // background-position: center left;
+  // background-repeat: no-repeat;
+  // background-size: 10px 15px !important;
+  border: 0;
+  border-radius: 0;
+  background-color: rgba(5, 84, 242, 0);
+}
+button:focus,
+button:focus-visible {
+  outline: none !important;
+}
 .badge {
   background-color: white !important;
   background-image: url("./assets/arrow.svg") !important;
@@ -71,7 +91,7 @@ $transparent: rgba(5, 84, 242, 0.4);
   color: $white !important;
   font-family: "Nunito", sans-serif;
   font-weight: 600 !important;
-  font-size: 11px !important;
+  font-size: 13px !important;
 }
 
 .css-1y4n9jw {
@@ -84,7 +104,7 @@ GridItem {
 .main {
   position: relative;
   margin: auto;
-  width: 62.7%;
+  width: 55%;
   height: 100%;
   text-align: left;
   display: flex;
@@ -137,7 +157,6 @@ a:hover {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
   font-size: 20px;
-  line-height: 20px;
   color: $primary;
   vertical-align: bottom;
 }

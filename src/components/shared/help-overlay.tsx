@@ -1,17 +1,6 @@
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Button,
-} from "@chakra-ui/react";
 import React from "react";
 
-import { Box, Divider, Link, Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 const HelpOverlay = () => {
   return (

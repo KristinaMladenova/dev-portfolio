@@ -6,79 +6,85 @@ import { ProjectsArray } from "./../projects-array";
 
 const Navbar = () => {
   return (
-    <Tabs variant="unstyled" defaultIndex={0}>
+    <Tabs variant="unstyled" marginTop="30px" defaultIndex={0}>
       <TabList>
         <Tab
+          className="contentFilter"
           _selected={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
+            backgroundImage: "url(./src/assets/straight-arrow.svg)",
+            backgroundPosition: "center left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "15px",
+            paddingLeft: "50px",
             borderRadius: "0",
-          }}
-          _hover={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
-            borderRadius: "0",
-          }}
-          _active={{
-            fontWeight: "bolder",
-            border: "1px solid pink",
-            borderRadius: "0",
+            color: "blue",
+            fontWeight: "600",
+            textDecorationLine: "underline",
           }}
         >
           all
         </Tab>
         <Tab
+          className="contentFilter"
           _selected={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
+            backgroundImage: "url(./src/assets/straight-arrow.svg)",
+            backgroundPosition: "center left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "15px",
+            paddingLeft: "50px",
             borderRadius: "0",
-          }}
-          _hover={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
-            borderRadius: "0",
+            color: "blue",
+            fontWeight: "600",
+            textDecorationLine: "underline",
           }}
         >
           graphic design
         </Tab>
         <Tab
+          className="contentFilter"
           _selected={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
+            backgroundImage: "url(./src/assets/straight-arrow.svg)",
+            backgroundPosition: "center left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "15px",
+            paddingLeft: "50px",
             borderRadius: "0",
-          }}
-          _hover={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
-            borderRadius: "0",
+            color: "blue",
+            fontWeight: "600",
+            textDecorationLine: "underline",
           }}
         >
           dev
         </Tab>
         <Tab
+          className="contentFilter"
           _selected={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
+            backgroundImage: "url(./src/assets/straight-arrow.svg)",
+            backgroundPosition: "center left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "15px",
+            paddingLeft: "50px",
+            border: " 0px",
             borderRadius: "0",
-          }}
-          _hover={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
-            borderRadius: "0",
+            color: "blue",
+            fontWeight: "600",
+            textDecorationLine: "underline",
           }}
         >
           uiux
         </Tab>
         <Tab
+          isDisabled
           _selected={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
+            backgroundImage: "url(./src/assets/straight-arrow.svg)",
+            backgroundPosition: "center left",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "15px",
+            paddingLeft: "50px",
+            border: " 0px",
             borderRadius: "0",
-          }}
-          _hover={{
-            fontWeight: "bolder",
-            borderBottom: "1px solid blue",
-            borderRadius: "0",
+            color: "blue",
+            fontWeight: "600",
           }}
         >
           blog ᴺᴱᵂ

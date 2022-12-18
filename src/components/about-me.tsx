@@ -92,7 +92,6 @@ const AboutMe = () => {
           h="20px"
           w="100%"
           padding="p"
-          lineHeight="12px"
         >
           <HStack h="100$" w="100%">
             <Box
