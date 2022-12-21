@@ -14,13 +14,13 @@ import InsetButton from "./shared/insetButton";
 const ProfileCard = () => {
   return (
     <Card className="card" w="20%">
-      <CardBody color="blue" margin="auto">
+      <CardBody color="#0554f2" margin="auto">
         <Image
           src="src/assets/profile-picture.svg"
           h="100p%"
           w="100%"
           alt="This is me!~"
-          style={{ borderRadius: "0", border: "1px solid blue" }}
+          style={{ borderRadius: "0", border: "1px solid #0554f2" }}
         />
 
         <Stack direction="column" mt="2" spacing="2" width="100%" marginTop="0">
@@ -53,19 +53,14 @@ const ProfileCard = () => {
             <Box
               style={{
                 marginTop: "5px",
-                background: "blue",
-                color: "white",
+                background: "#0554f2",
+                color: "#ffffff",
                 padding: "5px",
                 textAlign: "center",
               }}
             >
               Download CV
             </Box>
-            <Divider margin="5px" />
-            <Text style={{ fontSize: "10px", lineHeight: "10px" }}>
-              → ! This website is under construction, currently optimised for
-              Chrome based browsers.
-            </Text>
           </Text>
         </Stack>
       </CardBody>

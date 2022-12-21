@@ -17,7 +17,7 @@ const Navbar = () => {
             backgroundSize: "15px",
             paddingLeft: "50px",
             borderRadius: "0",
-            color: "blue",
+            color: "#0554f2",
             fontWeight: "600",
             textDecorationLine: "underline",
           }}
@@ -33,7 +33,7 @@ const Navbar = () => {
             backgroundSize: "15px",
             paddingLeft: "50px",
             borderRadius: "0",
-            color: "blue",
+            color: "#0554f2",
             fontWeight: "600",
             textDecorationLine: "underline",
           }}
@@ -49,7 +49,7 @@ const Navbar = () => {
             backgroundSize: "15px",
             paddingLeft: "50px",
             borderRadius: "0",
-            color: "blue",
+            color: "#0554f2",
             fontWeight: "600",
             textDecorationLine: "underline",
           }}
@@ -66,7 +66,7 @@ const Navbar = () => {
             paddingLeft: "50px",
             border: " 0px",
             borderRadius: "0",
-            color: "blue",
+            color: "#0554f2",
             fontWeight: "600",
             textDecorationLine: "underline",
           }}
@@ -83,7 +83,7 @@ const Navbar = () => {
             paddingLeft: "50px",
             border: " 0px",
             borderRadius: "0",
-            color: "blue",
+            color: "#0554f2",
             fontWeight: "600",
           }}
         >

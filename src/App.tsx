@@ -12,7 +12,7 @@ function App() {
     <ChakraProvider>
       <Box className="body">
         <Box className="main">
-          <Header zIndex="2" />
+          <Header zIndex="2" id="totop" />
 
           <Notebook zIndex="0" />
 

@@ -2,7 +2,7 @@ import { Badge } from "@chakra-ui/layout";
 import React from "react";
 import { ProjectType } from "../../types/project-type";
 
-const Eestec = ({ type, title, content, imageUrl, readMore }: ProjectType) => {
+const Eestec = ({ type, title, content, imageUrl, link }: ProjectType) => {
   return (
     <h1>
       {" "}

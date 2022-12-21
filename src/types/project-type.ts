@@ -3,5 +3,5 @@ export type ProjectType = {
   title: string;
   content: string;
   imageUrl: string;
-  readMore: string;
+  link: string;
 };
