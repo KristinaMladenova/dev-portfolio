@@ -17,7 +17,11 @@ const ProjectList = ({ projects }: AllProjectsType) => {
             title={p.title}
             content={p.content}
             imageUrl={p.imageUrl}
+            media={p.media}
             link={p.link}
+            caseStudy={p.caseStudy}
+            takeaway={p.takeaway}
+            conclusion={p.conclusion}
           />
         );
       })}

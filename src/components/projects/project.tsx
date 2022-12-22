@@ -8,11 +8,22 @@ import {
   AccordionItem,
   AccordionPanel,
   Badge,
+  Image,
 } from "@chakra-ui/react";
 import { ProjectType } from "../../types/project-type";
 import React from "react";
 
-const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
+const Project = ({
+  type,
+  title,
+  content,
+  imageUrl,
+  media,
+  link,
+  caseStudy,
+  takeaway,
+  conclusion,
+}: ProjectType) => {
   return (
     <>
       <Box
@@ -26,12 +37,12 @@ const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
         <Grid
           h="100%"
           templateRows="repeat(1, 1fr)"
-          templateColumns="repeat(4, 1fr)"
+          templateColumns="repeat(3, 1fr)"
           gap={3}
         >
           <GridItem
             rowSpan={1}
-            colSpan={3}
+            colSpan={2}
             rowStart={1}
             colStart={1}
             overflow="auto"
@@ -50,7 +61,7 @@ const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
             {content}
           </GridItem>
 
-          <GridItem rowSpan={1} colSpan={2} rowStart={1} colStart={4}>
+          <GridItem rowSpan={1} colSpan={2} rowStart={1} colStart={3}>
             <Box
               bg="#ffffff"
               border="1px solid #0554f2"
@@ -72,7 +83,7 @@ const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
             rowSpan={1}
             colSpan={2}
             rowStart={1}
-            colStart={4}
+            colStart={3}
             style={{
               display: "flex",
               justifyContent: "center",
@@ -104,10 +115,10 @@ const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              {media.map((x) => {
+                <Image src={x} />;
+              })}
+              {caseStudy}
             </AccordionPanel>
           </AccordionItem>
 
@@ -120,12 +131,7 @@ const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
                 <AccordionIcon />
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
+            <AccordionPanel pb={4}>{takeaway}</AccordionPanel>
           </AccordionItem>
 
           <AccordionItem>
@@ -137,12 +143,7 @@ const Project = ({ type, title, content, imageUrl, link }: ProjectType) => {
                 <AccordionIcon />
               </AccordionButton>
             </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
+            <AccordionPanel pb={4}>{conclusion}</AccordionPanel>
           </AccordionItem>
         </Accordion>{" "}
         {/* <GridItem rowSpan={1} colSpan={3} rowStart={5} colStart={1}>

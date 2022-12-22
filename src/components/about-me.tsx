@@ -1,17 +1,4 @@
-import {
-  Icon,
-  Box,
-  Text,
-  Grid,
-  GridItem,
-  HStack,
-  Tag,
-  Link,
-  IconButton,
-  SimpleGrid,
-  AbsoluteCenter,
-  Divider,
-} from "@chakra-ui/react";
+import { Box, Text, Grid, GridItem, HStack, Link } from "@chakra-ui/react";
 import React from "react";
 
 import {
@@ -27,6 +14,7 @@ const AboutMe = () => {
       style={{
         overflow: "hidden",
         justifyContent: "space-between",
+        backgroundColor: "#ebf2fe",
       }}
       borderBottom="1px solid #0554f2"
     >
@@ -35,15 +23,27 @@ const AboutMe = () => {
         templateRows="repeat(5, 1fr)"
         templateColumns="repeat(3, 1fr)"
         gap={0}
-        maxh="25vh"
+        maxH="25vh"
         margin="auto"
       >
-        <GridItem rowSpan={1} h="20px" colSpan={2}>
-          <h1 className="h1" style={{ fontSize: "35px", color: "#0554f2" }}>
+        <GridItem rowSpan={1} colSpan={2}>
+          <h1
+            className="h1"
+            style={{
+              fontSize: "35px",
+              color: "#0554f2",
+            }}
+          >
             Kristina Mladenova
           </h1>
         </GridItem>
-        <GridItem h="20px" rowSpan={1} colSpan={1} textAlign="right">
+        <GridItem
+          h="20px"
+          rowSpan={1}
+          colSpan={1}
+          textAlign="right"
+          
+        >
           <Link href="https://github.com/KristinaMladenova" isExternal>
             <TiSocialGithub className="socials" />
           </Link>
