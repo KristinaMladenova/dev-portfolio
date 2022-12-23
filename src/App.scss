@@ -1,108 +1,323 @@
-$white: #FFFFFF;
-$off-white: #EBF2FE;
-$primary: #0554F2;
-$secondary: #4B86FB;
-$transparent: #0554F2, 0.5;
+$white: #ffffff;
+$off-white: #ebf2fe;
+$primary: #0554f2;
+$secondary: #4b86fb;
+$transparent: rgba(5, 84, 242, 0.4);
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,900;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;0,900;1,600&display=swap");
 
-
-.h1 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 900;
-  color: $primary;
-}
-
-.h2 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-  color: $secondary;
-}
-
-.help{
-  padding:10px;
-  color: $secondary;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 600;
-  text-shadow:
-  -1px -1px 0 $white,
-   0   -1px 0 $white,
-   1px -1px 0 $white,
-   1px  0   0 $white,
-   1px  1px 0 $white,
-   0    1px 0 $white,
-  -1px  1px 0 $white,
-  -1px  0   0 $white;}
-
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.body {
+  font-size: 13px;
+  font-family: "Nunito";
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $off-white;
+  background-image: url("./assets/grid.svg");
+  background-size: 20vh;
+  color: $primary !important;
 }
 
 .header {
-  position: absolute;
-  left: 0;
-  top: 0;
   height: 50px;
   width: 100%;
-  padding: 1em;
-  background-color: $off-white;
 }
 
-.title {
+.card {
+  height: 100%;
+  overflow: none;
+  border-radius: 0 !important;
+  background-color: $white !important;
+  border: 1px solid $primary;
+  box-shadow: 2px 2px 0px $transparent !important;
+  display: inline-block !important;
+}
+
+.css-10kxouo {
+  padding: 0 !important;
+}
+.css-a5mhaz {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.tag {
+  margin-top: 8px;
+  text-transform: none !important;
+  background-color: transparent !important;
+  color: $secondary !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 800 !important;
+  font-size: 13px !important;
+  min-height: 0 !important;
+  margin-right: 10px;
+}
+.contentFilter {
+  border: 1px solid transparent !important;
+  border-radius: 0;
+  color: $secondary;
+  font-weight: 500;
+}
+.contentFilter:active,
+.contentFilter:hover,
+.contentFilter:target,
+.contentFilter:focus {
+  // background-image: url(./src/assets/straight-arrow.svg);
+  // background-position: center left;
+  // background-repeat: no-repeat;
+  // background-size: 10px 15px !important;
+  border: 0;
+  border-radius: 0;
+  background-color: rgba(5, 84, 242, 0);
+}
+button:focus,
+button:focus-visible {
+  outline: none !important;
+}
+.badge {
+  // background-color: white !important;
+  // background-image: url("./assets/arrow.svg") !important;
+  // background-position: right !important;
+  // background-repeat: no-repeat !important;
+  // background-size: cover !important;
+  // padding-right: 10px !important;
+  border-radius: 0px !important;
+  color: $primary !important;
+  text-transform: lowercase !important;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600 !important;
+  font-size: 10px !important;
+  letter-spacing: 5px;
+  height: fit-content;
+  padding-top: 2px;
+}
+.badge:before {
+  content: "→";
+}
+
+.css-1y4n9jw {
+  text-indent: 0 !important;
+}
+.grid,
+GridItem {
+  background-color: rgba(0, 0, 255, 0);
+}
+.main {
+  position: relative;
   margin: auto;
-  width: 60%;
+  margin-left: 15%;
+  margin-right: 15%;
+  width: 100%;
+  height: 100%;
   text-align: left;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
 
-.container {
-  padding: 1em;
+.pagecontent {
+  width: 100%;
+  height: 90%;
+  text-align: left;
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: scroll;
+  margin: auto;
+  padding-right: 20px;
+}
+
+.footer {
+  height: 50px;
+  width: 100%;
   display: flex;
-  flex: 1;
-  background-color: $white;
-  border: 1px solid $primary;
-  filter: drop-shadow(10px 10px 4px $transparent);
+  margin-left: 0.5vh;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.container {
+  justify-content: space-between;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.element {
+  display: inline-block;
+  width: 100%;
+}
+.accordion > * {
+  text-align: justify;
+  padding-left: 0 !important;
+  border: 0px;
+  border-radius: 0 !important;
+  border-bottom: 1px solid $primary !important;
+}
+.css-uttm9k,
+.css-1hb5ode {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.css-uttm9k:hover,
+.css-uttm9k[data-hover] {
+  background-color: $white !important;
+  border-radius: 0 !important;
+  border: 1px solid transparent;
+}
+h1,
+h2,
+h3 {
+  display: inline !important;
 }
 
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+a:hover {
+  font-weight: 600 !important;
+  color: $off-white !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.h1 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: $primary;
+  vertical-align: bottom;
+}
+
+.h2,
+.totop {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: $secondary;
+}
+
+.title {
+  font-family: "Nunito";
+  margin: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $off-white;
+  border-bottom: 1px solid $primary;
+}
+
+.outlined-title {
+  padding-left: 2px;
+  padding-right: 10px;
+  color: $white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  text-shadow: -1.5px -1.5px 0 $primary, 0 -1.5px 0 $primary,
+    1.5px -1.5px 0 $primary, 1.5px 0 0 $primary, 1.5px 1.5px 0 $primary,
+    0 1.5px 0 $primary, -1.5px 1.5px 0 $primary, -1.5px 0 0 $primary;
+}
+
+p {
+  display: inline-block !important;
+  font-family: "Nunito", "sans-serif" !important;
+  font-weight: 500;
+  text-align: justify;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.socials {
+  height: 20px !important;
+  width: 20px !important;
+  margin-right: 5px;
+  color: $off-white;
+  background-color: $primary;
+  border: 1px solid $white;
+  border-radius: 50px;
+  box-shadow: 2px 2px 0px $transparent;
+  vertical-align: middle;
+  align-items: center;
+  display: inline;
+}
+.socials:hover,
+.socials > *:hover {
+  background-color: $secondary;
+  color: $white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.insetButton {
+  text-align: center;
+  padding: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  background: white;
+  border: 1px solid #0554f2;
+  border-radius: 0;
+  color: $secondary;
+  width: 200px;
+  box-shadow: inset -2px -2px 0px $transparent !important;
+}
+.insetButton:hover {
+  background-color: $secondary;
+  color: $off-white;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* Designing for scroll-bar */
+::-webkit-scrollbar,
+-mozkit-scrollbar {
+  width: 5px;
+  position: fixed;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* Track */
+::-webkit-scrollbar-track,
+-moxkit-scrollbar-track {
+  background-color: $transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb,
+-mozkit-scrollbar-thumb {
+  background-color: $secondary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover,
+-mozkit-scrollbar-thumb:hover {
+  background: $primary;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.chatbox {
+  display: none;
+}
+@media (min-width: 1100px) {
+  .chatbox {
+    display: display;
+  }
+}
+
+@media (max-width: 1100px) {
+  .chatbox {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .main,
+  .title {
+    width: 100%;
   }
 
-  to {
-    transform: rotate(360deg);
+  .css-tubnc,
+  .css-7togbo,
+  .card.css-1u9exe8 {
+    visibility: hidden;
+    display: none;
+    width: 0;
+    height: 0;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
